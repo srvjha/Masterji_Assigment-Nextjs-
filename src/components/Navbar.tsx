@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Laptop, Cloud, BarChart3, LayoutDashboard } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
   return (
@@ -13,6 +14,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex space-x-4">
+          <ThemeToggle/>
           <Link href="/dashboard/weather-news" className="flex items-center hover:text-gray-300">
             <Cloud className="mr-2 h-5 w-5" />
             Weather
