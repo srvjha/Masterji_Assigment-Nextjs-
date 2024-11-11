@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard Application
 
-## Getting Started
+This project demonstrates a comprehensive dashboard application built with React. It includes features for weather and news updates, a Kanban task board, and data analytics with charts. The application integrates multiple libraries and public APIs to provide a smooth user experience.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. Weather and News Dashboard (Route: `/dashboard/weather-news`)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Weather Section**:
+  - **API Integration**: Uses the OpenWeather API to display the current location, temperature, and conditions.
+  - **City Search**: Allows users to search for weather by city name.
+  - **Dynamic Data**: Fetches details like sunrise and sunset times from the API.
+  - **Loading State**: Displays a loading spinner (using `Loader2` from Lucide React) while data is being fetched.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **News Section**:
+  - **API Integration**: Fetches news articles using the News API.
+  - **Pagination**: Supports pagination to load more articles.
+  - **Error Handling**: Shows a message if the API call fails.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Interactive Kanban Board (Route: `/dashboard/kanban`)
 
-## Learn More
+- **Drag-and-Drop**: Built with Hello Pangea’s DnD library for intuitive task management.
+- **Columns**: Comes with default columns such as “To Do,” “In Progress,” and “Completed.”
+- **Task Management**: Users can create, edit, drag, and move tasks between columns.
+- **Modal Dialogs**: Radix UI Dialogs are used for adding tasks with a title, description, and due date.
+- **LocalStorage Persistence**: Saves the board's state in `localStorage` to retain data across page reloads.
+- **Responsive Design**: Adapts well to various screen sizes, including mobile.
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Analytics Dashboard (Route: `/dashboard/analytics`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Charts Section**:
+  - **Library Used**: Utilizes Chart.js with React for data visualization.
+  - **Line Chart**: Displays user activity trends over the last 7 days.
+  - **Bar Chart**: Shows monthly sales performance.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Dynamic Table**:
+  - **Data Population**: Uses a mock API to populate user data.
+  - **Features**: Includes pagination, search, and filtering options.
+  - **Table Structure**: Built with a custom Table component, separating header, body, and footer for clarity.
+  - **Loading State**: Shows a loading indicator while data is being fetched.
 
-## Deploy on Vercel
+## Summary
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is complete and includes detailed README documentation and relevant screenshots of the UI. A README file and example screenshots of the dashboard pages are also included to help showcase the functionality and design of the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+
