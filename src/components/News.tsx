@@ -15,7 +15,7 @@ const News = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=fbf55d12663143b9969e510dcab557c9&page=${page}`
+        `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=302d8c2b7e93801644dac351b551d591&page=${page}`
       );
       setArticles(response.data.articles);
     } catch (error) {
@@ -64,9 +64,9 @@ const News = () => {
               key={index}
               className={`p-4 border rounded-md ${isChecked ? "h-[480px]" : "h-[400px]"} shadow-md dark:bg-gray-700 dark:border-gray-600`}
             >
-              {article.urlToImage && (
+              {article.image && (
                 <img
-                  src={article.urlToImage}
+                  src={article.image}
                   alt={article.title}
                   className="w-full h-48 object-cover mb-2 rounded-md"
                 />
