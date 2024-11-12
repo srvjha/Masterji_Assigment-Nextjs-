@@ -25,7 +25,8 @@ const Weather = () => {
 
   return (
     <div className="p-4 bg-white dark:bg-gray-800 shadow-md rounded-md">
-      <h2 className="text-xl font-semibold mb-4 dark:text-gray-100">How's the weather today?</h2>
+     <h2 className="text-xl font-semibold mb-4 dark:text-gray-100">How&apos;s the weather today?</h2>
+
       <div className='flex flex-row'>
         <input
           type="text"
